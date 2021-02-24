@@ -47,45 +47,6 @@ docker exec -it tomcat02 ping tomcat01
 docker exec -it tomcat02 ping 192.168.0.1 # 192.168.0.1是tomcat01的IP地址
 ```
 
-#### Centos7安装docker
-
-```shell
-yum -y install gcc
-yum -y install gcc-c++
-
-yum remove docker \
-           docker-client \
-           docker-client-latest \
-           docker-common \
-           docker-latest \
-           docker-latest-logrotate \
-           docker-logrotate \
-           docker-engine
-           
-yum install -y yum-utils
-
-yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-
-yum makecache fast
-
-yum install -y docker-ce docker-ce-cli containerd.io
-
-systemctl start docker
 
 
-# 镜像加速
-sudo mkdir -p /etc/docker
-sudo tee /etc/docker/daemon.json <<-'EOF'
-{
-  "registry-mirrors": ["https://7alrgvv7.mirror.aliyuncs.com"]
-}
-EOF
-sudo systemctl daemon-reload
-sudo systemctl restart docker
-```
-
-- 离线安装docker rpm下载地址：
-https://mirrors.aliyun.com/docker-ce
-- rpm 网站：http://rpmfind.net/linux/RPM/index.html
-- rpm 网站：http://ftp.riken.jp/
-- Centos 官方库：http://mirror.centos.org/
+- 
