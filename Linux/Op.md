@@ -32,4 +32,13 @@ net.ipv4.tcp_mem = 94500000915000000927000000
 net.ipv4.tcp_fin_timeout = 1   
 net.ipv4.tcp_keepalive_time = 30
 net.ipv4.ip_local_port_range = 102465000
- ~~~
+~~~
+
+
+
+#### 内存池：
+
+优化内存性能，进程有虚拟的内存空间，由内核管理，（静态内存预分配，优化空间小），
+
+malloc
+
