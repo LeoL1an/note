@@ -127,13 +127,12 @@
 
   修改`文档1`，需要满足`version`等于100，版本号类型属于`外部版本号`，比如数据库维护的乐观锁
 
-### question
+### 坑
 
-Cannot allocate memory
+**Cannot allocate memory**
 
 docker 运行内存限制，无法给es足够的内存空间，调大docker内存的限制值，或者调小es的jvm内存值
 
-unknown setting [discovery.seed_host] please check that any required plugins are installed, or check the breaking changes documentation for removed setting
+**unknown setting [discovery.seed_host] please check that any required plugins are installed, or check the breaking changes documentation for removed setting**
 
 一个机器启动多个es时，端口不同，seed_host参数需要指定9300对应的端口
-
