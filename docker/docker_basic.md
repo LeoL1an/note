@@ -3,7 +3,7 @@
 #### 发布到阿里云
 
 ```shell
-# 1.登陆 LChg19940824
+# 1.登陆
 docker login --username=花田半亩_i registry.cn-hangzhou.aliyuncs.com
 # 2.镜像tag（重命名）
 docker tag [ImageId] registry.cn-hangzhou.aliyuncs.com/lian_default_namespace/<镜像名字>:[镜像版本号]
